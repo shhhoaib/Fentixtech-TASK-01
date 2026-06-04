@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    padding:10px;
+
+    display:grid;
+    gap:10px;
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 80px 60px 1fr 80px;
+
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "left main right"
+        "footer footer footer";
+}
+
+header{
+    grid-area:header;
+    background:#d9dee3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+nav{
+    grid-area:nav;
+    background:#d9dee3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#left{
+    grid-area:left;
+    background:#d9dee3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+main{
+    grid-area:main;
+    background:#d9dee3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#right{
+    grid-area:right;
+    background:#d9dee3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+footer{
+    grid-area:footer;
+    background:#d9dee3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>Header</header>
+
+<nav>Navigation Menu</nav>
+
+<aside id="left">Content</aside>
+
+<main>Main Content</main>
+
+<aside id="right">Content</aside>
+
+<footer>Footer</footer>
+
+</body>
+</html>
